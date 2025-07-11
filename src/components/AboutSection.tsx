@@ -58,7 +58,7 @@ const AboutSection = () => {
                 </div>
               </div>
               
-              <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+              <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg">
                 <p className="text-lg text-gray-700 font-medium">
                   Наша задача — выполнить монтаж быстро и профессионально, без оттягивания сроков, 
                   с полным комплектом документации. Мы сделаем хорошо там, где другим будет сложно! 
@@ -71,8 +71,8 @@ const AboutSection = () => {
             <div className="space-y-6">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow-sm">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-2">{feature.title}</h3>

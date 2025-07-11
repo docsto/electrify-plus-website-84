@@ -53,15 +53,15 @@ const ServicesSection = () => {
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-white border border-gray-200 rounded-xl p-8 hover:shadow-xl hover:border-blue-200 transition-all duration-300"
+                className="group bg-white border border-gray-200 rounded-xl p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300"
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                    <service.icon className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                    <service.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
                 

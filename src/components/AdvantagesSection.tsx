@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CheckCircle, Star, Shield, Users, Building, Clock, FileText } from 'lucide-react';
 
@@ -58,15 +57,15 @@ const AdvantagesSection = () => {
             {advantages.map((advantage, index) => (
               <div 
                 key={index} 
-                className="group text-center p-8 rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300"
+                className="group text-center p-8 rounded-xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all duration-300"
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-blue-600 transition-colors duration-300">
-                    <advantage.icon className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary transition-colors duration-300">
+                    <advantage.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
                   </div>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4 group-hover:text-primary transition-colors">
                   {advantage.title}
                 </h3>
                 
@@ -78,7 +77,7 @@ const AdvantagesSection = () => {
           </div>
 
           {/* Дополнительный призыв к действию */}
-          <div className="mt-16 text-center bg-blue-50 rounded-2xl p-8">
+          <div className="mt-16 text-center bg-primary/5 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Нас выбирают, когда нужен надёжный монтаж
             </h3>

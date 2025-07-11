@@ -78,12 +78,12 @@ const ProjectsSection = () => {
                   className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300"
                 >
                   <div className="mb-6">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                      <project.icon className="w-8 h-8 text-blue-600" />
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                      <project.icon className="w-8 h-8 text-primary" />
                     </div>
                   </div>
                   
-                  <div className="text-2xl font-bold text-blue-600 mb-2">{project.count}</div>
+                  <div className="text-2xl font-bold text-primary mb-2">{project.count}</div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">{project.title}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed">{project.description}</p>
                 </div>
@@ -92,14 +92,14 @@ const ProjectsSection = () => {
           </div>
 
           {/* Призыв к действию */}
-          <div className="mt-16 text-center bg-blue-600 text-white rounded-2xl p-12">
+          <div className="mt-16 text-center bg-primary text-white rounded-2xl p-12">
             <h3 className="text-3xl font-bold mb-4">Готовы стать нашим следующим успешным проектом?</h3>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-primary-foreground/80">
               Присоединяйтесь к списку довольных клиентов, которые доверили нам монтаж инженерных систем
             </p>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              className="bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Обсудить проект
             </button>

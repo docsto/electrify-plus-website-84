@@ -11,12 +11,12 @@ const Footer = () => {
             {/* Левая колонка - информация о компании */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">Э+</span>
                 </div>
                 <div>
                   <div className="font-bold text-xl">Элестри Плюс</div>
-                  <div className="text-sm text-blue-400">Монтируем как надо</div>
+                  <div className="text-sm text-primary">Монтируем как надо</div>
                 </div>
               </div>
               
@@ -37,27 +37,27 @@ const Footer = () => {
               
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <div className="text-sm text-gray-300">
                     г. Петропавловск, проезд А. Шажимбаева, 10, офис 201
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                   <a 
                     href="tel:+77162000000" 
-                    className="text-sm text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-sm text-gray-300 hover:text-primary transition-colors"
                   >
                     +7 (716) 200-00-00
                   </a>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                   <a 
                     href="mailto:elevator_sko@mail.ru" 
-                    className="text-sm text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-sm text-gray-300 hover:text-primary transition-colors"
                   >
                     elevator_sko@mail.ru
                   </a>
@@ -92,7 +92,7 @@ const Footer = () => {
             <div className="flex space-x-6">
               <a 
                 href="tel:+77162000000"
-                className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
                 Позвонить
               </a>
@@ -100,13 +100,13 @@ const Footer = () => {
                 href="https://wa.me/77162000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
                 WhatsApp
               </a>
               <a 
                 href="mailto:elevator_sko@mail.ru"
-                className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
                 Email
               </a>
