@@ -36,40 +36,40 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800">
+    <section className="py-20" style={{backgroundColor: '#e8e8e8'}}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Левая колонка с информацией */}
-            <div className="text-white space-y-6">
+            <div className="text-gray-800 space-y-6">
               <h2 className="text-4xl font-bold mb-6">Остались вопросы? Мы перезвоним!</h2>
-              <div className="space-y-4 text-lg text-blue-100">
+              <div className="space-y-4 text-lg text-gray-600">
                 <p>Получите бесплатную консультацию по вашему проекту</p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span>Выезд специалиста на объект</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span>Составление сметы</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span>Расчет сроков выполнения</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span>Подбор оптимального решения</span>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-blue-700/50 p-6 rounded-xl">
-                <p className="text-lg font-medium mb-2">Время работы:</p>
-                <p className="text-blue-100">Пн-Пт: 9:00 - 18:00</p>
-                <p className="text-blue-100">Сб: 9:00 - 15:00</p>
-                <p className="text-blue-100 mt-3 text-sm">Звонок и консультация бесплатно!</p>
+              <div className="bg-gray-700 p-6 rounded-xl">
+                <p className="text-lg font-medium mb-2 text-white">Время работы:</p>
+                <p className="text-gray-200">Пн-Пт: 9:00 - 18:00</p>
+                <p className="text-gray-200">Сб: 9:00 - 15:00</p>
+                <p className="text-gray-200 mt-3 text-sm">Звонок и консультация бесплатно!</p>
               </div>
             </div>
 
@@ -91,7 +91,7 @@ const ContactForm = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="pl-12 py-3 text-lg border-gray-300 focus:border-blue-500"
+                      className="pl-12 py-3 text-lg border-gray-300 focus:border-primary"
                     />
                   </div>
 
@@ -104,7 +104,7 @@ const ContactForm = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="pl-12 py-3 text-lg border-gray-300 focus:border-blue-500"
+                      className="pl-12 py-3 text-lg border-gray-300 focus:border-primary"
                     />
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const ContactForm = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold"
+                  className="w-full bg-primary hover:bg-primary/90 text-white py-4 text-lg font-semibold"
                 >
                   {isSubmitting ? (
                     "Отправляем..."
