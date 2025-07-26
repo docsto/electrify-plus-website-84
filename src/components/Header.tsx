@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import CostCalculationModal from './CostCalculationModal';
 
 const Header = () => {
+  const [isCostModalOpen, setIsCostModalOpen] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -75,7 +78,7 @@ const Header = () => {
               <span className="font-medium">+7 (716) 200-00-00</span>
             </a>
             <Button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => setIsCostModalOpen(true)}
               className="bg-primary hover:bg-primary/90 text-white px-6 py-2"
             >
               Рассчитать стоимость
@@ -83,6 +86,11 @@ const Header = () => {
           </div>
         </div>
       </div>
+      
+      <CostCalculationModal 
+        isOpen={isCostModalOpen} 
+        onClose={() => setIsCostModalOpen(false)} 
+      />
     </header>
   );
 };

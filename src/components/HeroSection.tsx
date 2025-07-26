@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import CostCalculationModal from './CostCalculationModal';
 
 const HeroSection = () => {
+  const [isCostModalOpen, setIsCostModalOpen] = useState(false);
+
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -59,7 +62,7 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  onClick={scrollToContact}
+                  onClick={() => setIsCostModalOpen(true)}
                   className="border-primary text-primary hover:bg-primary/10 px-8 py-4 text-lg"
                 >
                   Рассчитать стоимость
@@ -90,6 +93,11 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+      <CostCalculationModal 
+        isOpen={isCostModalOpen} 
+        onClose={() => setIsCostModalOpen(false)} 
+      />
     </section>
   );
 };

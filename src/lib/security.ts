@@ -99,3 +99,29 @@ export class RateLimiter {
     return Math.max(0, this.WINDOW_MS - timeElapsed);
   }
 }
+
+/**
+ * Simple rate limiting function for different actions
+ */
+export function checkRateLimit(action: string, maxRequests: number = 3, windowMs: number = 60000): boolean {
+  const key = `rateLimit_${action}`;
+  const now = Date.now();
+  
+  // Get stored timestamps for this action
+  const stored = localStorage.getItem(key);
+  let timestamps: number[] = stored ? JSON.parse(stored) : [];
+  
+  // Remove old timestamps outside the window
+  timestamps = timestamps.filter(timestamp => now - timestamp < windowMs);
+  
+  // Check if rate limit is exceeded
+  if (timestamps.length >= maxRequests) {
+    return false;
+  }
+  
+  // Add current timestamp and store
+  timestamps.push(now);
+  localStorage.setItem(key, JSON.stringify(timestamps));
+  
+  return true;
+}
