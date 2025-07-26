@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import CostCalculationModal from './CostCalculationModal';
+import ConsultationModal from './ConsultationModal';
 
 const HeroSection = () => {
   const [isCostModalOpen, setIsCostModalOpen] = useState(false);
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -53,7 +55,7 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  onClick={scrollToContact}
+                  onClick={() => setIsConsultationModalOpen(true)}
                   className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg"
                 >
                   Заказать консультацию
@@ -97,6 +99,11 @@ const HeroSection = () => {
       <CostCalculationModal 
         isOpen={isCostModalOpen} 
         onClose={() => setIsCostModalOpen(false)} 
+      />
+      
+      <ConsultationModal 
+        isOpen={isConsultationModalOpen} 
+        onClose={() => setIsConsultationModalOpen(false)} 
       />
     </section>
   );
