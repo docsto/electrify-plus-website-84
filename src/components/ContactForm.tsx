@@ -3,10 +3,15 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import { Phone, User, Send } from 'lucide-react';
+import { Phone, User, Send, AlertCircle } from 'lucide-react';
+import { validateName, validatePhone, sanitizeInput, RateLimiter } from '@/lib/security';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
+    name: '',
+    phone: ''
+  });
+  const [errors, setErrors] = useState({
     name: '',
     phone: ''
   });
@@ -15,7 +20,45 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Rate limiting check
+    if (!RateLimiter.canSubmit()) {
+      const remainingTime = Math.ceil(RateLimiter.getRemainingTime() / 1000);
+      toast({
+        title: "Слишком много попыток",
+        description: `Попробуйте снова через ${remainingTime} секунд`,
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    // Validate inputs
+    const nameValidation = validateName(formData.name);
+    const phoneValidation = validatePhone(formData.phone);
+    
+    const newErrors = {
+      name: nameValidation.error || '',
+      phone: phoneValidation.error || ''
+    };
+    
+    setErrors(newErrors);
+    
+    if (!nameValidation.isValid || !phoneValidation.isValid) {
+      toast({
+        title: "Ошибка валидации",
+        description: "Пожалуйста, исправьте ошибки в форме",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
+
+    // Sanitize data before processing
+    const sanitizedData = {
+      name: sanitizeInput(formData.name),
+      phone: sanitizeInput(formData.phone)
+    };
 
     // Имитация отправки формы
     setTimeout(() => {
@@ -24,14 +67,25 @@ const ContactForm = () => {
         description: "Мы перезвоним вам в течение 30 минут",
       });
       setFormData({ name: '', phone: '' });
+      setErrors({ name: '', phone: '' });
       setIsSubmitting(false);
     }, 1000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    
+    // Clear error when user starts typing
+    if (errors[name as keyof typeof errors]) {
+      setErrors({
+        ...errors,
+        [name]: ''
+      });
+    }
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
@@ -91,8 +145,17 @@ const ContactForm = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="pl-12 py-3 text-lg border-gray-300 focus:border-primary"
+                      maxLength={50}
+                      className={`pl-12 py-3 text-lg border-gray-300 focus:border-primary ${
+                        errors.name ? 'border-red-500 focus:border-red-500' : ''
+                      }`}
                     />
+                    {errors.name && (
+                      <div className="flex items-center mt-1 text-red-500 text-sm">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        {errors.name}
+                      </div>
+                    )}
                   </div>
 
                   <div className="relative">
@@ -104,8 +167,17 @@ const ContactForm = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="pl-12 py-3 text-lg border-gray-300 focus:border-primary"
+                      maxLength={20}
+                      className={`pl-12 py-3 text-lg border-gray-300 focus:border-primary ${
+                        errors.phone ? 'border-red-500 focus:border-red-500' : ''
+                      }`}
                     />
+                    {errors.phone && (
+                      <div className="flex items-center mt-1 text-red-500 text-sm">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        {errors.phone}
+                      </div>
+                    )}
                   </div>
                 </div>
 
