@@ -11,7 +11,7 @@ const Footer = () => {
             {/* Левая колонка - информация о компании */}
             <div className="space-y-4">
               <img 
-                src="/lovable-uploads/0571061b-ea97-4ce8-b291-d1421b94ead4.png" 
+                src="/lovable-uploads/16a8e9a1-d634-47a2-99e6-11df23c55e76.png" 
                 alt="Электри+" 
                 className="h-12 w-auto"
               />
