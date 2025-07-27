@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import CostCalculationModal from './CostCalculationModal';
 import ConsultationModal from './ConsultationModal';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 const HeroSection = () => {
   const [isCostModalOpen, setIsCostModalOpen] = useState(false);
@@ -72,19 +74,87 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Правая колонка с изображением */}
+            {/* Правая колонка со слайдером */}
             <div className="relative">
               <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8">
-                <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto">
-                      <span className="text-white text-3xl font-bold">Э+</span>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="text-lg font-semibold text-gray-800">Профессиональный монтаж</div>
-                      <div className="text-primary font-medium">Лицензии • НДС • Документооборот</div>
-                    </div>
-                  </div>
+                <div className="aspect-square rounded-xl overflow-hidden">
+                  <Carousel
+                    plugins={[
+                      Autoplay({
+                        delay: 3000,
+                      }),
+                    ]}
+                    className="w-full h-full"
+                    opts={{
+                      align: "start",
+                      loop: true,
+                    }}
+                  >
+                    <CarouselContent className="h-full">
+                      <CarouselItem className="h-full">
+                        <div className="relative h-full">
+                          <img 
+                            src="/lovable-uploads/86176baf-f814-4eb6-a15b-e006c6318450.png" 
+                            alt="Профессиональный монтаж - планирование проекта"
+                            className="w-full h-full object-cover rounded-xl"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-xl">
+                            <div className="text-white">
+                              <div className="text-lg font-semibold mb-1">Профессиональный монтаж</div>
+                              <div className="text-white/90 text-sm">Планирование и проектирование</div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem className="h-full">
+                        <div className="relative h-full">
+                          <img 
+                            src="/lovable-uploads/a7020336-d482-4bfe-bba3-4607e0673f46.png" 
+                            alt="Профессиональный монтаж - электромонтажные работы"
+                            className="w-full h-full object-cover rounded-xl"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-xl">
+                            <div className="text-white">
+                              <div className="text-lg font-semibold mb-1">Профессиональный монтаж</div>
+                              <div className="text-white/90 text-sm">Электромонтажные работы</div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem className="h-full">
+                        <div className="relative h-full">
+                          <img 
+                            src="/lovable-uploads/707fe5f6-dae7-43e5-a9a9-dba0aced7598.png" 
+                            alt="Профессиональный монтаж - контроль качества"
+                            className="w-full h-full object-cover rounded-xl"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-xl">
+                            <div className="text-white">
+                              <div className="text-lg font-semibold mb-1">Профессиональный монтаж</div>
+                              <div className="text-white/90 text-sm">Контроль качества работ</div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem className="h-full">
+                        <div className="relative h-full">
+                          <img 
+                            src="/lovable-uploads/f98501ae-cda5-4c43-bba6-db0073efd656.png" 
+                            alt="Профессиональный монтаж - системы управления"
+                            className="w-full h-full object-cover rounded-xl"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-xl">
+                            <div className="text-white">
+                              <div className="text-lg font-semibold mb-1">Профессиональный монтаж</div>
+                              <div className="text-white/90 text-sm">Системы управления и автоматизации</div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 hover:text-white" />
+                    <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 hover:text-white" />
+                  </Carousel>
                 </div>
               </div>
               
