@@ -39,6 +39,11 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Custom orange colors */
+    --orange-light: 25 100% 75%; /* light orange */
+    --orange-pale: 25 100% 96%; /* pale orange background */
+    --gray-light: 0 0% 75%; /* light gray */
+
     --sidebar-background: 0 0% 96%;
     --sidebar-foreground: 0 0% 16%;
     --sidebar-primary: 0 0% 0%;
