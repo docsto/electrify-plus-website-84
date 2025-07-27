@@ -10,15 +10,11 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Левая колонка - информация о компании */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">Э+</span>
-                </div>
-                <div>
-                  <div className="font-bold text-xl">Элестри Плюс</div>
-                  <div className="text-sm text-primary">Монтируем как надо</div>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/0571061b-ea97-4ce8-b291-d1421b94ead4.png" 
+                alt="Электри+" 
+                className="h-12 w-auto"
+              />
               
               <p className="text-gray-300 text-sm leading-relaxed">
                 Профессиональный монтаж инженерных систем и сетей. 
