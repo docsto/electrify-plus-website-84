@@ -19,14 +19,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Логотип */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Э+</span>
-            </div>
-            <div>
-              <div className="font-bold text-xl text-gray-800">Элестри Плюс</div>
-              <div className="text-sm text-primary">Монтируем как надо</div>
-            </div>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/a186bb1a-59cc-48e9-8c7c-b2bb7022cf01.png" 
+              alt="Электри+" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Навигация */}
