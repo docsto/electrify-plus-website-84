@@ -115,12 +115,13 @@ const ContactSection = () => {
                 
                 {/* Яндекс карта */}
                 <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
-                  <script 
-                    type="text/javascript" 
-                    charSet="utf-8" 
-                    async 
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acd9c23d157a45d27282c5c6d7cca3dfad68972b5014576da846fa403fe819e10&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
-                  ></script>
+                  <iframe 
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Acd9c23d157a45d27282c5c6d7cca3dfad68972b5014576da846fa403fe819e10&amp;source=constructor" 
+                    width="100%" 
+                    height="100%" 
+                    frameBorder="0"
+                    title="Карта офиса"
+                  ></iframe>
                 </div>
               </div>
 
