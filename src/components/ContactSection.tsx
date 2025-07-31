@@ -12,12 +12,14 @@ const ContactSection = () => {
     
     const mapContainer = document.getElementById('yandex-map-container');
     if (mapContainer) {
+      // Очищаем контейнер перед добавлением скрипта
+      mapContainer.innerHTML = '';
       mapContainer.appendChild(script);
     }
 
     return () => {
-      if (mapContainer && script.parentNode) {
-        mapContainer.removeChild(script);
+      if (mapContainer) {
+        mapContainer.innerHTML = '';
       }
     };
   }, []);
