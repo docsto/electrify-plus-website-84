@@ -77,26 +77,44 @@ const AdvantagesSection = () => {
           </div>
 
           {/* Дополнительный призыв к действию */}
-          <div className="mt-16 text-center bg-primary/5 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Нас выбирают, когда нужен надёжный монтаж
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="font-semibold text-gray-800 mb-2">Государственные и квазигосударственные организации</div>
+          <div className="mt-16 rounded-2xl overflow-hidden">
+            <div className="grid md:grid-cols-2 min-h-[400px]">
+              {/* Левая часть - логотип на оранжевом фоне */}
+              <div className="bg-orange-500 flex items-center justify-center p-12">
+                <div className="w-48 h-48 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/3d2379cc-e5aa-4b7d-ad74-5d3d2b69c5f7.png" 
+                    alt="Электри+ логотип" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
-              <div className="text-center">
-                <div className="font-semibold text-gray-800 mb-2">Владельцы бизнеса</div>
-              </div>
-              <div className="text-center">
-                <div className="font-semibold text-gray-800 mb-2">Строительные организации</div>
+              
+              {/* Правая часть - текст на черном фоне */}
+              <div className="bg-black flex items-center justify-center p-8">
+                <div className="text-center max-w-lg">
+                  <h3 className="text-2xl font-bold text-white mb-6">
+                    Нас выбирают, когда нужен надёжный монтаж
+                  </h3>
+                  <div className="space-y-4 mb-8">
+                    <div className="text-center">
+                      <div className="font-semibold text-white mb-2">Государственные и квазигосударственные организации</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold text-white mb-2">Владельцы бизнеса</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold text-white mb-2">Строительные организации</div>
+                    </div>
+                  </div>
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    Все те, кому важны сроки и документация, кто ищет подрядчика, а не источник проблем! 
+                    Если вы устали от подрядчиков, которые срывают сроки, игнорируют нормы и не сдают документы — 
+                    мы готовы к совместной плодотворной работе!
+                  </p>
+                </div>
               </div>
             </div>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Все те, кому важны сроки и документация, кто ищет подрядчика, а не источник проблем! 
-              Если вы устали от подрядчиков, которые срывают сроки, игнорируют нормы и не сдают документы — 
-              мы готовы к совместной плодотворной работе!
-            </p>
           </div>
         </div>
       </div>

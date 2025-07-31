@@ -27,7 +27,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-slate-700">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Основной контент */}
@@ -35,10 +35,10 @@ const AboutSection = () => {
             {/* Левая колонка с текстом */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-4xl font-bold text-gray-800 mb-6">О компании</h2>
-                <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+                <h2 className="text-4xl font-bold text-white mb-6">О компании</h2>
+                  <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                   <p>
-                    <strong className="text-gray-800">ТОО "Элестри Плюс"</strong> — команда специалистов инженерных систем.
+                    <strong className="text-white">ТОО "Элестри Плюс"</strong> — команда специалистов инженерных систем.
                   </p>
                   
                   <p>
@@ -58,8 +58,8 @@ const AboutSection = () => {
                 </div>
               </div>
               
-              <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg">
-                <p className="text-lg text-gray-700 font-medium">
+              <div className="bg-primary/20 border-l-4 border-primary p-6 rounded-r-lg">
+                <p className="text-lg text-gray-200 font-medium">
                   Наша задача — выполнить монтаж быстро и профессионально, без оттягивания сроков, 
                   с полным комплектом документации. Мы сделаем хорошо там, где другим будет сложно! 
                   Нас привлекают туда, где важен результат!
