@@ -92,43 +92,43 @@ const Header = () => {
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-80">
+              <SheetContent side="right" className="w-64 md:w-80 z-[100]">
                 <SheetHeader>
-                  <SheetTitle>Меню</SheetTitle>
+                  <SheetTitle className="text-base md:text-lg">Меню</SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col space-y-6 mt-6">
+                <div className="flex flex-col space-y-4 md:space-y-6 mt-6">
                   <a 
                     href="#about" 
                     onClick={() => scrollToSection('about')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-sm md:text-lg text-gray-700 hover:text-primary transition-colors whitespace-nowrap"
                   >
                     О нас
                   </a>
                   <a 
                     href="#services" 
                     onClick={() => scrollToSection('services')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-sm md:text-lg text-gray-700 hover:text-primary transition-colors whitespace-nowrap"
                   >
                     Услуги
                   </a>
                   <a 
                     href="#advantages" 
                     onClick={() => scrollToSection('advantages')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-sm md:text-lg text-gray-700 hover:text-primary transition-colors whitespace-nowrap"
                   >
                     Преимущества
                   </a>
                   <a 
                     href="#projects" 
                     onClick={() => scrollToSection('projects')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-sm md:text-lg text-gray-700 hover:text-primary transition-colors whitespace-nowrap"
                   >
                     Объекты
                   </a>
                   <a 
                     href="#contact" 
                     onClick={() => scrollToSection('contact')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-sm md:text-lg text-gray-700 hover:text-primary transition-colors whitespace-nowrap"
                   >
                     Контакты
                   </a>
@@ -136,17 +136,11 @@ const Header = () => {
                   <div className="pt-4 border-t">
                     <a 
                       href="tel:+77162000000" 
-                      className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors mb-4"
+                      className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
                     >
                       <Phone className="w-4 h-4" />
-                      <span className="font-medium">+7 (716) 200-00-00</span>
+                      <span className="font-medium text-sm md:text-base">+7 (716) 200-00-00</span>
                     </a>
-                    <Button 
-                      onClick={() => setIsCostModalOpen(true)}
-                      className="w-full bg-primary hover:bg-primary/90 text-white"
-                    >
-                      Рассчитать стоимость
-                    </Button>
                   </div>
                 </div>
               </SheetContent>
