@@ -1,8 +1,27 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Clock } from 'lucide-react';
 
 const ContactSection = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.async = true;
+    script.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acd9c23d157a45d27282c5c6d7cca3dfad68972b5014576da846fa403fe819e10&width=530&height=369&lang=ru_RU&scroll=true';
+    
+    const mapContainer = document.getElementById('yandex-map-container');
+    if (mapContainer) {
+      mapContainer.appendChild(script);
+    }
+
+    return () => {
+      if (mapContainer && script.parentNode) {
+        mapContainer.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -114,15 +133,10 @@ const ContactSection = () => {
                 <h3 className="text-2xl font-semibold text-gray-800 mb-6">Мы на карте</h3>
                 
                 {/* Яндекс карта */}
-                <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
-                  <iframe 
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Acd9c23d157a45d27282c5c6d7cca3dfad68972b5014576da846fa403fe819e10&amp;source=constructor" 
-                    width="100%" 
-                    height="100%" 
-                    frameBorder="0"
-                    title="Карта офиса"
-                  ></iframe>
-                </div>
+                <div 
+                  id="yandex-map-container" 
+                  className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden"
+                ></div>
               </div>
 
               {/* Быстрые действия */}
