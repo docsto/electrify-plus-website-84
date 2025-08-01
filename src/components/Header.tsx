@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import CostCalculationModal from './CostCalculationModal';
 
 const Header = () => {
@@ -154,46 +154,56 @@ const Header = () => {
                   <SheetTitle>Меню</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col space-y-6 mt-6">
-                  <a 
-                    href="#about" 
-                    onClick={() => scrollToSection('about')}
-                    className="text-gray-700 hover:text-primary transition-colors"
-                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
-                  >
-                    О нас
-                  </a>
-                  <a 
-                    href="#services" 
-                    onClick={() => scrollToSection('services')}
-                    className="text-gray-700 hover:text-primary transition-colors"
-                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
-                  >
-                    Услуги
-                  </a>
-                  <a 
-                    href="#advantages" 
-                    onClick={() => scrollToSection('advantages')}
-                    className="text-gray-700 hover:text-primary transition-colors"
-                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
-                  >
-                    Преимущества
-                  </a>
-                  <a 
-                    href="#projects" 
-                    onClick={() => scrollToSection('projects')}
-                    className="text-gray-700 hover:text-primary transition-colors"
-                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
-                  >
-                    Объекты
-                  </a>
-                  <a 
-                    href="#contact" 
-                    onClick={() => scrollToSection('contact')}
-                    className="text-gray-700 hover:text-primary transition-colors"
-                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
-                  >
-                    Контакты
-                  </a>
+                  <SheetClose asChild>
+                    <a 
+                      href="#about" 
+                      onClick={() => scrollToSection('about')}
+                      className="text-gray-700 hover:text-primary transition-colors"
+                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                    >
+                      О нас
+                    </a>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <a 
+                      href="#services" 
+                      onClick={() => scrollToSection('services')}
+                      className="text-gray-700 hover:text-primary transition-colors"
+                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                    >
+                      Услуги
+                    </a>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <a 
+                      href="#advantages" 
+                      onClick={() => scrollToSection('advantages')}
+                      className="text-gray-700 hover:text-primary transition-colors"
+                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                    >
+                      Преимущества
+                    </a>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <a 
+                      href="#projects" 
+                      onClick={() => scrollToSection('projects')}
+                      className="text-gray-700 hover:text-primary transition-colors"
+                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                    >
+                      Объекты
+                    </a>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <a 
+                      href="#contact" 
+                      onClick={() => scrollToSection('contact')}
+                      className="text-gray-700 hover:text-primary transition-colors"
+                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                    >
+                      Контакты
+                    </a>
+                  </SheetClose>
                   
                   <div className="pt-4 border-t">
                     <a 
@@ -201,12 +211,12 @@ const Header = () => {
                       className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors mb-4"
                     >
                       <Phone className="w-4 h-4" />
-                      <span className="font-medium" style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}>+7 (716) 200-00-00</span>
+                      <span className="font-medium" style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}>+7 (716) 200-00-00</span>
                     </a>
                     <Button 
                       onClick={() => setIsCostModalOpen(true)}
                       className="w-full bg-primary hover:bg-primary/90 text-white"
-                      style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
+                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
                     >
                       Рассчитать стоимость
                     </Button>
