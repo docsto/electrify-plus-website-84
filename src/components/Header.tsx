@@ -21,11 +21,16 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Логотип */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/a186bb1a-59cc-48e9-8c7c-b2bb7022cf01.png" 
-              alt="Электри+" 
-              className="h-10 md:h-12 w-auto object-contain"
-            />
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+            >
+              <img 
+                src="/lovable-uploads/a186bb1a-59cc-48e9-8c7c-b2bb7022cf01.png" 
+                alt="Электри+" 
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+            </button>
           </div>
 
           {/* Навигация */}
