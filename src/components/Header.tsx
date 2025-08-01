@@ -39,6 +39,7 @@ const Header = () => {
               href="#about" 
               onClick={() => scrollToSection('about')}
               className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
             >
               О нас
             </a>
@@ -46,6 +47,7 @@ const Header = () => {
               href="#services" 
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
             >
               Услуги
             </a>
@@ -53,6 +55,7 @@ const Header = () => {
               href="#advantages" 
               onClick={() => scrollToSection('advantages')}
               className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
             >
               Преимущества
             </a>
@@ -60,6 +63,7 @@ const Header = () => {
               href="#projects" 
               onClick={() => scrollToSection('projects')}
               className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
             >
               Объекты
             </a>
@@ -67,6 +71,7 @@ const Header = () => {
               href="#contact" 
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
             >
               Контакты
             </a>
@@ -79,11 +84,12 @@ const Header = () => {
               className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">+7 (716) 200-00-00</span>
+              <span className="font-medium" style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}>+7 (716) 200-00-00</span>
             </a>
             <Button 
               onClick={() => setIsCostModalOpen(true)}
               className="bg-primary hover:bg-primary/90 text-white px-6 py-2 whitespace-nowrap"
+              style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
             >
               Рассчитать стоимость
             </Button>
@@ -95,35 +101,40 @@ const Header = () => {
               <a 
                 href="#about" 
                 onClick={() => scrollToSection('about')}
-                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
               >
                 О нас
               </a>
               <a 
                 href="#services" 
                 onClick={() => scrollToSection('services')}
-                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
               >
                 Услуги
               </a>
               <a 
                 href="#advantages" 
                 onClick={() => scrollToSection('advantages')}
-                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
               >
                 Преимущества
               </a>
               <a 
                 href="#projects" 
                 onClick={() => scrollToSection('projects')}
-                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
               >
                 Объекты
               </a>
               <a 
                 href="#contact" 
                 onClick={() => scrollToSection('contact')}
-                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
               >
                 Контакты
               </a>
@@ -146,35 +157,40 @@ const Header = () => {
                   <a 
                     href="#about" 
                     onClick={() => scrollToSection('about')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-gray-700 hover:text-primary transition-colors"
+                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
                   >
                     О нас
                   </a>
                   <a 
                     href="#services" 
                     onClick={() => scrollToSection('services')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-gray-700 hover:text-primary transition-colors"
+                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
                   >
                     Услуги
                   </a>
                   <a 
                     href="#advantages" 
                     onClick={() => scrollToSection('advantages')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-gray-700 hover:text-primary transition-colors"
+                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
                   >
                     Преимущества
                   </a>
                   <a 
                     href="#projects" 
                     onClick={() => scrollToSection('projects')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-gray-700 hover:text-primary transition-colors"
+                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
                   >
                     Объекты
                   </a>
                   <a 
                     href="#contact" 
                     onClick={() => scrollToSection('contact')}
-                    className="text-lg text-gray-700 hover:text-primary transition-colors"
+                    className="text-gray-700 hover:text-primary transition-colors"
+                    style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
                   >
                     Контакты
                   </a>
@@ -185,11 +201,12 @@ const Header = () => {
                       className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors mb-4"
                     >
                       <Phone className="w-4 h-4" />
-                      <span className="font-medium">+7 (716) 200-00-00</span>
+                      <span className="font-medium" style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}>+7 (716) 200-00-00</span>
                     </a>
                     <Button 
                       onClick={() => setIsCostModalOpen(true)}
                       className="w-full bg-primary hover:bg-primary/90 text-white"
+                      style={{ fontSize: 'clamp(0.7rem, 4vw, 1rem)' }}
                     >
                       Рассчитать стоимость
                     </Button>
