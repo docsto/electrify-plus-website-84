@@ -29,59 +29,100 @@ const Header = () => {
           </div>
 
           {/* Навигация */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden sm:hidden md:hidden lg:flex items-center space-x-8">
             <a 
               href="#about" 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
             >
               О нас
             </a>
             <a 
               href="#services" 
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
             >
               Услуги
             </a>
             <a 
               href="#advantages" 
               onClick={() => scrollToSection('advantages')}
-              className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
             >
               Преимущества
             </a>
             <a 
               href="#projects" 
               onClick={() => scrollToSection('projects')}
-              className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
             >
               Объекты
             </a>
             <a 
               href="#contact" 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
             >
               Контакты
             </a>
           </nav>
 
           {/* Контакты и кнопка для десктопа */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <a 
               href="tel:+77162000000" 
-              className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors"
+              className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
             >
               <Phone className="w-4 h-4" />
               <span className="font-medium">+7 (716) 200-00-00</span>
             </a>
             <Button 
               onClick={() => setIsCostModalOpen(true)}
-              className="bg-primary hover:bg-primary/90 text-white px-6 py-2"
+              className="bg-primary hover:bg-primary/90 text-white px-6 py-2 whitespace-nowrap"
             >
               Рассчитать стоимость
             </Button>
+          </div>
+
+          {/* Планшетное меню */}
+          <div className="hidden sm:flex md:flex lg:hidden items-center space-x-4">
+            <nav className="flex items-center space-x-3 h-12">
+              <a 
+                href="#about" 
+                onClick={() => scrollToSection('about')}
+                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              >
+                О нас
+              </a>
+              <a 
+                href="#services" 
+                onClick={() => scrollToSection('services')}
+                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              >
+                Услуги
+              </a>
+              <a 
+                href="#advantages" 
+                onClick={() => scrollToSection('advantages')}
+                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              >
+                Преимущества
+              </a>
+              <a 
+                href="#projects" 
+                onClick={() => scrollToSection('projects')}
+                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              >
+                Объекты
+              </a>
+              <a 
+                href="#contact" 
+                onClick={() => scrollToSection('contact')}
+                className="text-sm xl:text-base text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+              >
+                Контакты
+              </a>
+            </nav>
           </div>
 
           {/* Мобильное меню */}
