@@ -84,7 +84,7 @@ const HeroSection = () => {
                         delay: 5000,
                       }),
                     ]}
-                    className="w-full h-full hidden lg:block"
+                    className="w-full h-full"
                     opts={{
                       align: "start",
                       loop: true,
@@ -155,21 +155,6 @@ const HeroSection = () => {
                     <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 hover:text-white" />
                     <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 hover:text-white" />
                   </Carousel>
-                  
-                  {/* Статичное изображение для планшетов и мобильных */}
-                  <div className="h-full lg:hidden">
-                    <img 
-                      src="/lovable-uploads/86176baf-f814-4eb6-a15b-e006c6318450.png" 
-                      alt="Профессиональный монтаж"
-                      className="w-full h-full object-cover rounded-xl"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-xl">
-                      <div className="text-white">
-                        <div className="text-lg font-semibold mb-1">Профессиональный монтаж</div>
-                        <div className="text-white/90 text-sm">Планирование и проектирование</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               
