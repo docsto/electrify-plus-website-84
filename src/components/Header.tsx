@@ -102,7 +102,7 @@ const Header = () => {
                 href="#about" 
                 onClick={() => scrollToSection('about')}
                 className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
-                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
+                style={{ fontSize: 'clamp(0.975rem, 1.5vw, 1.1375rem)' }}
               >
                 О нас
               </a>
@@ -110,7 +110,7 @@ const Header = () => {
                 href="#services" 
                 onClick={() => scrollToSection('services')}
                 className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
-                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
+                style={{ fontSize: 'clamp(0.975rem, 1.5vw, 1.1375rem)' }}
               >
                 Услуги
               </a>
@@ -118,7 +118,7 @@ const Header = () => {
                 href="#advantages" 
                 onClick={() => scrollToSection('advantages')}
                 className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
-                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
+                style={{ fontSize: 'clamp(0.975rem, 1.5vw, 1.1375rem)' }}
               >
                 Преимущества
               </a>
@@ -126,7 +126,7 @@ const Header = () => {
                 href="#projects" 
                 onClick={() => scrollToSection('projects')}
                 className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
-                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
+                style={{ fontSize: 'clamp(0.975rem, 1.5vw, 1.1375rem)' }}
               >
                 Объекты
               </a>
@@ -134,7 +134,7 @@ const Header = () => {
                 href="#contact" 
                 onClick={() => scrollToSection('contact')}
                 className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
-                style={{ fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}
+                style={{ fontSize: 'clamp(0.975rem, 1.5vw, 1.1375rem)' }}
               >
                 Контакты
               </a>
@@ -159,7 +159,7 @@ const Header = () => {
                       href="#about" 
                       onClick={() => scrollToSection('about')}
                       className="text-gray-700 hover:text-primary transition-colors"
-                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                      style={{ fontSize: 'clamp(0.56875rem, 2vw, 0.65rem)' }}
                     >
                       О нас
                     </a>
@@ -169,7 +169,7 @@ const Header = () => {
                       href="#services" 
                       onClick={() => scrollToSection('services')}
                       className="text-gray-700 hover:text-primary transition-colors"
-                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                      style={{ fontSize: 'clamp(0.56875rem, 2vw, 0.65rem)' }}
                     >
                       Услуги
                     </a>
@@ -179,7 +179,7 @@ const Header = () => {
                       href="#advantages" 
                       onClick={() => scrollToSection('advantages')}
                       className="text-gray-700 hover:text-primary transition-colors"
-                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                      style={{ fontSize: 'clamp(0.56875rem, 2vw, 0.65rem)' }}
                     >
                       Преимущества
                     </a>
@@ -189,7 +189,7 @@ const Header = () => {
                       href="#projects" 
                       onClick={() => scrollToSection('projects')}
                       className="text-gray-700 hover:text-primary transition-colors"
-                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                      style={{ fontSize: 'clamp(0.56875rem, 2vw, 0.65rem)' }}
                     >
                       Объекты
                     </a>
@@ -199,7 +199,7 @@ const Header = () => {
                       href="#contact" 
                       onClick={() => scrollToSection('contact')}
                       className="text-gray-700 hover:text-primary transition-colors"
-                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                      style={{ fontSize: 'clamp(0.56875rem, 2vw, 0.65rem)' }}
                     >
                       Контакты
                     </a>
@@ -211,12 +211,12 @@ const Header = () => {
                       className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors mb-4"
                     >
                       <Phone className="w-4 h-4" />
-                      <span className="font-medium" style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}>+7 (716) 200-00-00</span>
+                      <span className="font-medium" style={{ fontSize: 'clamp(0.56875rem, 2vw, 0.65rem)' }}>+7 (716) 200-00-00</span>
                     </a>
                     <Button 
                       onClick={() => setIsCostModalOpen(true)}
                       className="w-full bg-primary hover:bg-primary/90 text-white"
-                      style={{ fontSize: 'clamp(0.4375rem, 2vw, 0.5rem)' }}
+                      style={{ fontSize: 'clamp(0.56875rem, 2vw, 0.65rem)' }}
                     >
                       Рассчитать стоимость
                     </Button>
