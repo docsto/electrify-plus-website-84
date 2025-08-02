@@ -75,7 +75,7 @@ const HeroSection = () => {
             </div>
 
             {/* Правая колонка со слайдером */}
-            <div className="relative">
+            <div className="relative hidden lg:block">
               <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8">
                 <div className="aspect-square rounded-xl overflow-hidden">
                   <Carousel
