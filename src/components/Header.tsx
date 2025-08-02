@@ -7,11 +7,13 @@ import CostCalculationModal from './CostCalculationModal';
 
 const Header = () => {
   const [isCostModalOpen, setIsCostModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false); // Закрываем меню при клике на пункт
     }
   };
 
@@ -143,7 +145,7 @@ const Header = () => {
 
           {/* Мобильное меню */}
           <div className="md:hidden">
-            <Sheet>
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
