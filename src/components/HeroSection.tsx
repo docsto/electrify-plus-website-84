@@ -89,68 +89,6 @@ const HeroSection = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
-      {/* Projects Gallery Section - hidden on mobile and tablet */}
-      <section className="py-16 bg-gray-50 hidden lg:block">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Левая колонка с текстом */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Наши успешные проекты
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Более 10 лет опыта в сфере электромонтажных работ и строительства. 
-                Доверьте свой проект профессионалам.
-              </p>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-primary">150+</div>
-                  <div className="text-sm text-gray-600">Завершенных проектов</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary">10+</div>
-                  <div className="text-sm text-gray-600">Лет опыта</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-gray-600">Довольных клиентов</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Правая колонка со слайдером */}
-            <div className="relative">
-              <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8">
-                <div className="aspect-square rounded-xl overflow-hidden">
-                  <Carousel
-                    opts={{
-                      align: "start",
-                      loop: true,
-                    }}
-                    className="w-full h-full"
-                  >
-                    <CarouselContent>
-                      {images.map((image, index) => (
-                        <CarouselItem key={index}>
-                          <div className="h-full">
-                            <img 
-                              src={image} 
-                              alt={`Проект ${index + 1}`}
-                              className="w-full h-full object-cover rounded-lg"
-                            />
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-4" />
-                    <CarouselNext className="right-4" />
-                  </Carousel>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <ConsultationModal 
         isOpen={isConsultationModalOpen} 
