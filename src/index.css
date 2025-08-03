@@ -142,3 +142,10 @@ html {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Parallax Effect */
+.parallax-bg {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
