@@ -1,100 +1,95 @@
 
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { Play, Award, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import ConsultationModal from './ConsultationModal';
+import ConsultationModal from '@/components/ConsultationModal';
+import heroImage from '@/assets/hero-construction.jpg';
 
 const HeroSection = () => {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
-  const images = [
-    '/lovable-uploads/0571061b-ea97-4ce8-b291-d1421b94ead4.png',
-    '/lovable-uploads/16a8e9a1-d634-47a2-99e6-11df23c55e76.png',
-    '/lovable-uploads/3d2379cc-e5aa-4b7d-ad74-5d3d2b69c5f7.png',
-    '/lovable-uploads/707fe5f6-dae7-43e5-a9a9-dba0aced7598.png',
-    '/lovable-uploads/86176baf-f814-4eb6-a15b-e006c6318450.png',
-    '/lovable-uploads/a7020336-d482-4bfe-bba3-4607e0673f46.png',
-    '/lovable-uploads/f98501ae-cda5-4c43-bba6-db0073efd656.png'
-  ];
-
   return (
-    <>
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('${images[0]}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-          marginTop: typeof window !== 'undefined' && window.innerWidth >= 1024 ? '40px' : '0'
-        }}
-      >
-        {/* Decorative elements */}
-        <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
-          <div className="flex flex-col space-y-4 ml-8">
-            <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-            <div className="w-2 h-2 bg-primary/60 rounded-full animate-pulse delay-300"></div>
-            <div className="w-2 h-2 bg-primary/40 rounded-full animate-pulse delay-700"></div>
-          </div>
+    <section 
+      className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${heroImage})`,
+        marginTop: typeof window !== 'undefined' && window.innerWidth >= 1024 ? '40px' : '0'
+      }}
+    >
+      {/* Decorative Elements */}
+      <div className="absolute left-4 top-1/2 transform -translate-y-1/2 hidden lg:block">
+        <div className="flex flex-col space-y-4">
+          <div className="w-3 h-3 bg-primary rounded-full"></div>
+          <div className="w-3 h-3 bg-primary/60 rounded-full"></div>
+          <div className="w-3 h-3 bg-primary/30 rounded-full"></div>
         </div>
+      </div>
 
-        <div className="container mx-auto px-4 relative z-20">
-          <div className="text-center text-white">
+      <div className="container mx-auto px-4 z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-white">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full mb-6">
-              <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-              <span className="text-sm font-medium">МЫ СТРОИМ, ВЫ ПРОЦВЕТАЕТЕ</span>
+            <div className="inline-flex items-center space-x-2 bg-primary/90 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+              <Award className="w-4 h-4 text-white" />
+              <span className="text-sm font-medium">Мы строим, вы процветаете</span>
             </div>
 
-            {/* Main heading */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              <span className="text-white">КАЧЕСТВЕННОЕ</span>
-              <br />
-              <span className="text-white">СТРОИТЕЛЬСТВО</span>
-              <br />
-              <span className="text-primary">ДОЛГОВЕЧНЫЕ</span>{' '}
-              <span className="text-primary">ВПЕЧАТЛЕНИЯ</span>
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Качественный монтаж
+              <span className="block text-primary">долговечные впечатления</span>
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">
-              Профессиональные электромонтажные работы, строительство и ремонт. 
-              Создаем надежные решения для вашего комфорта и безопасности.
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Компании по монтажу предлагают широкий спектр услуг, включая предварительное планирование, 
+              управление проектами, проектирование и архитектурные услуги.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={() => setIsConsultationModalOpen(true)}
                 size="lg"
-                className="bg-primary hover:bg-primary-dark text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 text-lg group"
               >
-                Получить консультацию
+                Узнать больше
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              
               <Button 
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-background-dark px-8 py-4 text-lg font-semibold backdrop-blur-sm transition-all duration-300"
+                className="border-white/20 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-black px-8 py-3 text-lg"
               >
-                <Play className="w-5 h-5 mr-2" />
-                Смотреть видео
+                Наши услуги
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
           </div>
+
+          {/* Right side - Play button */}
+          <div className="hidden lg:flex justify-center items-center">
+            <div className="relative">
+              <Button 
+                size="lg"
+                className="w-24 h-24 rounded-full bg-primary hover:bg-primary/90 text-white shadow-2xl"
+              >
+                <Play className="w-8 h-8 fill-current" />
+              </Button>
+              <div className="absolute inset-0 w-24 h-24 rounded-full border-2 border-primary animate-ping"></div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        {/* Bottom gradient overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-      </section>
-
-
+      {/* Diagonal Shape */}
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 transform rotate-45 translate-x-48 translate-y-48 hidden lg:block"></div>
+      
       <ConsultationModal 
         isOpen={isConsultationModalOpen} 
         onClose={() => setIsConsultationModalOpen(false)} 
       />
-    </>
+    </section>
   );
 };
 
