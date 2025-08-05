@@ -5,22 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import React from 'react';
-import WhyChooseUs from './components/WhyChooseUs';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      {/* Хедер или другие компоненты */}
-
-      {/* Добавляем секцию "Почему выбирают нас" */}
-      <WhyChooseUs />
-
-      {/* Футер или другие секции */}
-    </div>
-  );
-}
 
 const queryClient = new QueryClient();
 
