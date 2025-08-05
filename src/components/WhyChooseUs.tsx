@@ -2,8 +2,14 @@ import React from 'react';
 import { FaCheckCircle, FaTools, FaUsers, FaClock } from 'react-icons/fa';
 import './WhyChooseUs.css';
 
-const WhyChooseUs = () => {
-  const features = [
+interface Feature {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+const WhyChooseUs: React.FC = () => {
+  const features: Feature[] = [
     {
       icon: <FaCheckCircle className="icon" />,
       title: "Гарантия качества",
