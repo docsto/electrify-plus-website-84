@@ -29,18 +29,20 @@ const Header = () => {
   return (
     <>
       {/* Top contact bar */}
-      <div className="bg-background-dark text-white py-2 hidden lg:block">
-        <div className="container mx-auto px-4">
+      <div className="bg-background-dark text-white py-3 hidden lg:block relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+        <div className="container mx-auto px-4 relative">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
-              <span>Добро пожаловать в Электри+ - Строительство и Ремонт</span>
+              <span className="animate-fade-in">Добро пожаловать в Электри+ - Строительство и Ремонт</span>
             </div>
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-primary" />
+            <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-2 hover:text-primary transition-colors">
+                <Clock className="w-4 h-4 text-primary" />
                 <span>Время работы: Пн - Сб: 8:00 - 15:00</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 hover:text-primary transition-colors">
+                <Mail className="w-4 h-4 text-primary" />
                 <span>Email: info@electri.kz</span>
               </div>
             </div>
@@ -48,7 +50,17 @@ const Header = () => {
         </div>
       </div>
 
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50" style={{ top: typeof window !== 'undefined' && window.innerWidth >= 1024 ? '40px' : '0' }}>
+      <header 
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-white/95 backdrop-blur-md shadow-elegant border-b border-gray-200/50' 
+            : 'bg-white/80 backdrop-blur-sm'
+        }`} 
+        style={{ 
+          top: typeof window !== 'undefined' && window.innerWidth >= 1024 ? (isScrolled ? '0' : '52px') : '0',
+          transform: isScrolled ? 'translateY(0)' : 'translateY(0)'
+        }}
+      >
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Логотип */}
@@ -70,57 +82,64 @@ const Header = () => {
               <a 
                 href="#about" 
                 onClick={() => scrollToSection('about')}
-                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="relative text-gray-700 hover:text-primary transition-all duration-300 cursor-pointer whitespace-nowrap font-medium group"
                 style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
               >
                 О нас
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a 
                 href="#services" 
                 onClick={() => scrollToSection('services')}
-                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="relative text-gray-700 hover:text-primary transition-all duration-300 cursor-pointer whitespace-nowrap font-medium group"
                 style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
               >
                 Услуги
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a 
                 href="#advantages" 
                 onClick={() => scrollToSection('advantages')}
-                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="relative text-gray-700 hover:text-primary transition-all duration-300 cursor-pointer whitespace-nowrap font-medium group"
                 style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
               >
                 Преимущества
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a 
                 href="#projects" 
                 onClick={() => scrollToSection('projects')}
-                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="relative text-gray-700 hover:text-primary transition-all duration-300 cursor-pointer whitespace-nowrap font-medium group"
                 style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
               >
                 Объекты
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a 
                 href="#contact" 
                 onClick={() => scrollToSection('contact')}
-                className="text-gray-700 hover:text-primary transition-colors cursor-pointer whitespace-nowrap"
+                className="relative text-gray-700 hover:text-primary transition-all duration-300 cursor-pointer whitespace-nowrap font-medium group"
                 style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
               >
                 Контакты
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             </nav>
 
             {/* Контакты и кнопка для десктопа */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-6">
               <a 
                 href="tel:+77162000000" 
-                className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
+                className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-all duration-300 whitespace-nowrap group"
               >
-                <Phone className="w-4 h-4" />
-                <span className="font-medium" style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}>+7 (716) 200-00-00</span>
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Phone className="w-4 h-4 group-hover:text-white transition-colors" />
+                </div>
+                <span className="font-semibold" style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}>+7 (716) 200-00-00</span>
               </a>
               <Button 
                 onClick={() => setIsCostModalOpen(true)}
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-2 whitespace-nowrap"
+                className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-glow text-white px-8 py-3 rounded-full font-semibold whitespace-nowrap transform hover:scale-105 transition-all duration-300"
                 style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
               >
                 Рассчитать стоимость
