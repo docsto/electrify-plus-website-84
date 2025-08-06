@@ -8,7 +8,7 @@ import AboutSection from '@/components/AboutSection';
 import AdvantagesSection from '@/components/AdvantagesSection';
 import ProjectsSection from '@/components/ProjectsSection';
 
-import ContactForm from '@/components/ContactForm';
+
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -23,7 +23,7 @@ const Index = () => {
       <AdvantagesSection />
       <ProjectsSection />
       
-      <ContactForm />
+      
       <ContactSection />
       <Footer />
     </div>
